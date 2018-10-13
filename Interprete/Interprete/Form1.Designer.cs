@@ -30,47 +30,84 @@
         {
             this.InText = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BTNLinea = new System.Windows.Forms.Button();
+            this.PanelVisual = new System.Windows.Forms.Panel();
+            this.TBLinea = new System.Windows.Forms.TextBox();
+            this.BTNPalabra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InText
             // 
-            this.InText.Location = new System.Drawing.Point(42, 34);
+            this.InText.Location = new System.Drawing.Point(52, 109);
+            this.InText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InText.Name = "InText";
-            this.InText.Size = new System.Drawing.Size(306, 236);
+            this.InText.Size = new System.Drawing.Size(407, 290);
             this.InText.TabIndex = 0;
             this.InText.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 276);
+            this.button1.Location = new System.Drawing.Point(52, 407);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 53);
             this.button1.TabIndex = 1;
             this.button1.Text = "Interpreta";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BTNLinea
             // 
-            this.button2.Location = new System.Drawing.Point(257, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sig";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTNLinea.Location = new System.Drawing.Point(182, 407);
+            this.BTNLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTNLinea.Name = "BTNLinea";
+            this.BTNLinea.Size = new System.Drawing.Size(100, 53);
+            this.BTNLinea.TabIndex = 2;
+            this.BTNLinea.Text = "Siguiente linea";
+            this.BTNLinea.UseVisualStyleBackColor = true;
+            // 
+            // PanelVisual
+            // 
+            this.PanelVisual.BackColor = System.Drawing.Color.Silver;
+            this.PanelVisual.Location = new System.Drawing.Point(560, 109);
+            this.PanelVisual.Name = "PanelVisual";
+            this.PanelVisual.Size = new System.Drawing.Size(445, 290);
+            this.PanelVisual.TabIndex = 3;
+            // 
+            // TBLinea
+            // 
+            this.TBLinea.Location = new System.Drawing.Point(560, 45);
+            this.TBLinea.Name = "TBLinea";
+            this.TBLinea.ReadOnly = true;
+            this.TBLinea.Size = new System.Drawing.Size(445, 22);
+            this.TBLinea.TabIndex = 4;
+            // 
+            // BTNPalabra
+            // 
+            this.BTNPalabra.Location = new System.Drawing.Point(796, 431);
+            this.BTNPalabra.Name = "BTNPalabra";
+            this.BTNPalabra.Size = new System.Drawing.Size(98, 23);
+            this.BTNPalabra.TabIndex = 5;
+            this.BTNPalabra.Text = "Siguiente";
+            this.BTNPalabra.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.BTNPalabra);
+            this.Controls.Add(this.TBLinea);
+            this.Controls.Add(this.PanelVisual);
+            this.Controls.Add(this.BTNLinea);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.InText);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -78,7 +115,10 @@
 
         private System.Windows.Forms.RichTextBox InText;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BTNLinea;
+        private System.Windows.Forms.Panel PanelVisual;
+        private System.Windows.Forms.TextBox TBLinea;
+        private System.Windows.Forms.Button BTNPalabra;
     }
 }
 

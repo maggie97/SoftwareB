@@ -1,0 +1,10 @@
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.exe.config
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.exe
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.pdb
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.Form1.resources
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.Properties.Resources.resources
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.GenerateResource.cache
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.exe
+C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.pdb
