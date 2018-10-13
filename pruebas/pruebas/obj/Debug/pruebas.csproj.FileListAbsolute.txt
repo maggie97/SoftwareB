@@ -1,0 +1,10 @@
+C:\Users\Maggie\source\repos\pruebas\pruebas\bin\Debug\pruebas.exe.config
+C:\Users\Maggie\source\repos\pruebas\pruebas\bin\Debug\pruebas.exe
+C:\Users\Maggie\source\repos\pruebas\pruebas\bin\Debug\pruebas.pdb
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.csprojAssemblyReference.cache
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.Form1.resources
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.Properties.Resources.resources
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.csproj.GenerateResource.cache
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.csproj.CoreCompileInputs.cache
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.exe
+C:\Users\Maggie\source\repos\pruebas\pruebas\obj\Debug\pruebas.pdb
