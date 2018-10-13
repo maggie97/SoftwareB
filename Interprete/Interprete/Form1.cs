@@ -74,5 +74,32 @@ namespace Interprete
         {
 
         }
+
+        private void PanelVisual_Paint(object sender, PaintEventArgs e)
+        {
+            Figura f;
+            int x = 100, y = 40;
+            switch(Figura.SelectedIndex)
+            {
+                case 0:
+                    f = new Circulo(x, y, "circulo", "c", 30);
+                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
+                    break;
+                case 1:
+                    f = new Cuadro(x, y, "Cuadrado", "c", 30);
+                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
+                    break;
+                case 2:
+                    f = new Triangulo(x, y, "circulo", "c", 30,30);
+                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
+                    break;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Invalidate();
+            PanelVisual.Invalidate();
+        }
     }
 }

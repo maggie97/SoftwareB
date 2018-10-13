@@ -8,3 +8,13 @@ C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.cspro
 C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.CoreCompileInputs.cache
 C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.exe
 C:\Users\Ivan\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.pdb
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.exe.config
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.exe
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.pdb
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csprojAssemblyReference.cache
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.Form1.resources
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.Properties.Resources.resources
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.GenerateResource.cache
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.CoreCompileInputs.cache
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.exe
+C:\Users\karen\Desktop\GitHub\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.pdb

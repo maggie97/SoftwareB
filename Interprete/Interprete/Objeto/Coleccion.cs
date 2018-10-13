@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interprete.Objeto
 {
-    class Coleccion
+    class Coleccion : Obj
     {
+        public Coleccion(string tipo, string nombre) : base(tipo, nombre)
+        {
+        }
     }
 }

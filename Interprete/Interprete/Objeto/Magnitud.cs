@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interprete.Objeto
 {
-    class Magnitud
+    class Magnitud : Obj
     {
+        public Magnitud(string tipo, string nombre) : base(tipo, nombre)
+        {
+        }
     }
 }

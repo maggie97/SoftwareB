@@ -8,5 +8,19 @@ namespace Interprete
 {
     class Obj
     {
+        Figura f;
+        string tipo;
+        string nomb;
+
+        public Obj(string tipo, string nombre)
+        {
+            this.tipo = tipo;
+            nomb = nombre;
+        }
+
+        public void creaFig()
+        {
+
+        }
     }
 }
