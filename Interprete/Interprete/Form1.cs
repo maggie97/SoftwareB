@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,53 +14,49 @@ namespace Interprete
 {
     public partial class Form1 : Form
     {
-        int linea = 0;
+        int linea;
+        int Max;
+        List<String> LineaCodigo;
+        Obj Ob;
         public Form1()
         {
+            LineaCodigo = new List<string>();
             InitializeComponent();
         }
-
+        //Evento del botón Interpreta
         private void button1_Click(object sender, EventArgs e)
         {
-            Interpreta(InText.Lines[linea]);
+            linea = 0;
+            Max = InText.Lines.Length;
+            BTNLinea.Enabled = true;
+            button1.Enabled = false;
+            TBLinea.Text = InText.Lines[linea]; //Enseña la línea sobre la que está trabajando
+            InterpretaOBJ(InText.Lines[linea]); //Llama al método de Interpreta, para buscar el tipo
             linea++;
 
         }
-
-        public  List<string> Interpreta(string linea)
+        //Método que separa la primer línea, creando el objeto del tipo que se le indica
+        public void InterpretaOBJ(string linea)
         {
-            string[] cadenas = linea.Split('\n', '-');
-            List<string> instrucc = new List<string>();
-            for (int i = 0; i < cadenas.Length; i++)
-            {
-                if (cadenas[i].Contains("="))
-                {
+            string[] aux;
+            aux = linea.Split(' ');
+            Ob = new Obj(aux[0], aux[1]);
+            Dibuja();
 
-                }
-            }
-            //List<string> gram = new List<string>();
-            /*Dictionary<string, List<string>> d = new Dictionary<string, List<string>>();
-            for (int i = 0; i < cadenas.Length; i++)
+        }
+        public void Dibuja()
+        {
+            switch (Ob.Tipo1)
             {
-                if (cadenas[i].Contains("="))
-                {
-                    List<string> s = cadenas[i - 1].Split(' ').ToList();
-                    s.Remove("");
-
-                    if (!gram.Contains(s.First()))
-                    {
-                        //gram.Add(s.First());
-                        d.Add(s.First(), new List<string>());
-                        Lenguaje(d, s[0], cadenas[i]);
-                    }
-                    else
-                    {
-                        Lenguaje(d, s[0], cadenas[i]);
-                    }
-                }
+                
             }
-            return d;*/
-            return instrucc;
+        }
+        //Método que separa las siguientes lineas, asignando las acciones que se harán
+        public void Interpreta(string linea)
+        {
+            string[] aux;
+            aux = linea.Split(' ');
+
         }
         public void Lenguaje(Dictionary<string, List<string>> d, string tipo, string lenguaje)
         {
@@ -100,6 +97,24 @@ namespace Interprete
         {
             Invalidate();
             PanelVisual.Invalidate();
+        }
+
+        private void BTNLinea_Click(object sender, EventArgs e)
+        {
+            if (linea == Max)
+            {
+                BTNLinea.Enabled = false;
+                button1.Enabled = true;
+                TBLinea.Text = "";
+                MessageBox.Show("Ya no hay más lineas");
+            }
+            else
+            {
+                TBLinea.Text = InText.Lines[linea];
+                Interpreta(InText.Lines[linea]);
+                linea++;
+            }
+            
         }
     }
 }

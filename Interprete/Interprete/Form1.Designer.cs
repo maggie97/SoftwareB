@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.InText = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.BTNLinea = new System.Windows.Forms.Button();
@@ -36,21 +37,25 @@
             this.BTNPalabra = new System.Windows.Forms.Button();
             this.Figura = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Prueba = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InText
             // 
-            this.InText.Location = new System.Drawing.Point(39, 89);
+            this.InText.Location = new System.Drawing.Point(52, 110);
+            this.InText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InText.Name = "InText";
-            this.InText.Size = new System.Drawing.Size(306, 236);
+            this.InText.Size = new System.Drawing.Size(407, 290);
             this.InText.TabIndex = 0;
             this.InText.Text = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 331);
+            this.button1.Location = new System.Drawing.Point(52, 407);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 43);
+            this.button1.Size = new System.Drawing.Size(100, 53);
             this.button1.TabIndex = 1;
             this.button1.Text = "Interpreta";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,38 +63,41 @@
             // 
             // BTNLinea
             // 
-            this.BTNLinea.Location = new System.Drawing.Point(136, 331);
+            this.BTNLinea.Enabled = false;
+            this.BTNLinea.Location = new System.Drawing.Point(181, 407);
+            this.BTNLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNLinea.Name = "BTNLinea";
-            this.BTNLinea.Size = new System.Drawing.Size(75, 43);
+            this.BTNLinea.Size = new System.Drawing.Size(100, 53);
             this.BTNLinea.TabIndex = 2;
             this.BTNLinea.Text = "Siguiente linea";
             this.BTNLinea.UseVisualStyleBackColor = true;
+            this.BTNLinea.Click += new System.EventHandler(this.BTNLinea_Click);
             // 
             // PanelVisual
             // 
             this.PanelVisual.BackColor = System.Drawing.Color.Silver;
-            this.PanelVisual.Location = new System.Drawing.Point(420, 89);
-            this.PanelVisual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelVisual.Location = new System.Drawing.Point(560, 110);
+            this.PanelVisual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelVisual.Name = "PanelVisual";
-            this.PanelVisual.Size = new System.Drawing.Size(334, 236);
+            this.PanelVisual.Size = new System.Drawing.Size(445, 290);
             this.PanelVisual.TabIndex = 3;
             this.PanelVisual.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelVisual_Paint);
             // 
             // TBLinea
             // 
-            this.TBLinea.Location = new System.Drawing.Point(420, 37);
-            this.TBLinea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TBLinea.Location = new System.Drawing.Point(560, 46);
+            this.TBLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TBLinea.Name = "TBLinea";
             this.TBLinea.ReadOnly = true;
-            this.TBLinea.Size = new System.Drawing.Size(335, 20);
+            this.TBLinea.Size = new System.Drawing.Size(445, 22);
             this.TBLinea.TabIndex = 4;
             // 
             // BTNPalabra
             // 
-            this.BTNPalabra.Location = new System.Drawing.Point(597, 350);
-            this.BTNPalabra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNPalabra.Location = new System.Drawing.Point(796, 431);
+            this.BTNPalabra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTNPalabra.Name = "BTNPalabra";
-            this.BTNPalabra.Size = new System.Drawing.Size(74, 19);
+            this.BTNPalabra.Size = new System.Drawing.Size(99, 23);
             this.BTNPalabra.TabIndex = 5;
             this.BTNPalabra.Text = "Siguiente";
             this.BTNPalabra.UseVisualStyleBackColor = true;
@@ -101,26 +109,44 @@
             "Circulo",
             "Cuadrado",
             "Triangulo"});
-            this.Figura.Location = new System.Drawing.Point(420, 350);
+            this.Figura.Location = new System.Drawing.Point(560, 431);
+            this.Figura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Figura.Name = "Figura";
-            this.Figura.Size = new System.Drawing.Size(121, 21);
+            this.Figura.Size = new System.Drawing.Size(160, 24);
             this.Figura.TabIndex = 6;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(466, 377);
+            this.button2.Location = new System.Drawing.Point(621, 464);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 43);
+            this.button2.Size = new System.Drawing.Size(100, 53);
             this.button2.TabIndex = 7;
             this.button2.Text = "Muestra";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // Prueba
+            // 
+            this.Prueba.AutoSize = true;
+            this.Prueba.Location = new System.Drawing.Point(391, 497);
+            this.Prueba.Name = "Prueba";
+            this.Prueba.Size = new System.Drawing.Size(46, 17);
+            this.Prueba.TabIndex = 9;
+            this.Prueba.Text = "label1";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.Prueba);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Figura);
             this.Controls.Add(this.BTNPalabra);
@@ -129,6 +155,7 @@
             this.Controls.Add(this.BTNLinea);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.InText);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -147,6 +174,8 @@
         private System.Windows.Forms.Button BTNPalabra;
         private System.Windows.Forms.ComboBox Figura;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label Prueba;
     }
 }
 
