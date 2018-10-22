@@ -8,3 +8,13 @@ C:\Users\Ivan\Documents\Cuadros\Cuadros\obj\Debug\Cuadros.csproj.GenerateResourc
 C:\Users\Ivan\Documents\Cuadros\Cuadros\obj\Debug\Cuadros.csproj.CoreCompileInputs.cache
 C:\Users\Ivan\Documents\Cuadros\Cuadros\obj\Debug\Cuadros.exe
 C:\Users\Ivan\Documents\Cuadros\Cuadros\obj\Debug\Cuadros.pdb
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\bin\Debug\Cuadros.exe.config
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\bin\Debug\Cuadros.exe
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\bin\Debug\Cuadros.pdb
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.csprojAssemblyReference.cache
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.Form1.resources
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.Properties.Resources.resources
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.csproj.GenerateResource.cache
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.csproj.CoreCompileInputs.cache
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.exe
+C:\Users\Ivan\Desktop\SoftwareB2\Cuadros\Cuadros\obj\Debug\Cuadros.pdb

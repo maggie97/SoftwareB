@@ -19,12 +19,16 @@ namespace Interprete
         string[] aux;
         string Funcion;
         string valor = "0";
+        Graphics g;
+        Figura f;
         List<String> LineaCodigo;
         Obj Ob;
         public Form1()
         {
+            
             LineaCodigo = new List<string>();
             InitializeComponent();
+            g = PanelVisual.CreateGraphics();
         }
         //Evento del botón Interpreta
         private void button1_Click(object sender, EventArgs e)
@@ -43,23 +47,27 @@ namespace Interprete
         {
             aux = linea.Split(' ');
             Ob = new Obj(aux[0], aux[1]);
-            Dibuja();
-        }
-        public void Dibuja()
-        {
-            switch (Ob.Tipo1)
+            if(Ob.Tipo1 == "int")
             {
-
+                f = new Cuadro(100, 40, "Cuadrado", "c", 30);
+                f.Dibuja(g, new Pen(Color.Beige), new SolidBrush(Color.Black));
+            }
+            else if (Ob.Tipo1 == "float")
+            {
+                f = new Circulo(100, 40, "Circulo", "c", 30);
+                f.Dibuja(g, new Pen(Color.Beige), new SolidBrush(Color.Black));
             }
         }
+
         //Método que separa las siguientes lineas, asignando las acciones que se harán
         public void Interpreta(string Linea)
         {
-
+            string[] l;
             aux = Linea.Split(' ');
             if (linea == 2) //Contador de línea
             {
-                Funcion = aux[0];
+                l = aux[0].Split('(');
+                Funcion = l[0];
                 Prueba.Text = Funcion;
             }
             if (linea == 1)
@@ -81,46 +89,48 @@ namespace Interprete
         {
 
         }
-
+        public void DibujaFigura(int x, int y, int Fac,int a, int b)
+        {
+            y = (b + 40) / 2;
+            x = (a + 20) / 2;
+            f.Dibuja(g, new Pen(Color.Beige), new SolidBrush(Color.Black));
+            g.DrawString(Convert.ToString(Fac), new Font("Times New Roman", 10), new SolidBrush(Color.Black), x + 5, y + 10);
+            a += 20;
+            b += 20;
+            Thread.Sleep(1000);
+            g.Clear(Color.Silver);
+        }
         private void PanelVisual_Paint(object sender, PaintEventArgs e)
         {
-            Figura f;
             int x = 0, y = 0;
             int a = 30;
             int b = 30;
             int v = Int32.Parse(valor);
             int Fac = 1;
-            if (Funcion == "Factorial(a)")
+            if (Funcion == "Factorial")
             {
-                for (int i = 1; i < v + 1; i++)
+                if(Ob.Tipo1 == "int")
                 {
-                    Fac = Fac * i;
-                    f = new Cuadro(100, 40, "Cuadrado", "c", a);
-                    y = (b + 40) / 2;
-                    x = (a + 20) / 2;
-                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
-                    e.Graphics.DrawString(Convert.ToString(Fac), new Font("Times New Roman", 10), new SolidBrush(Color.Black), x + 5, y + 10);
-                    a += 20;
-                    b += 20;
-                    Thread.Sleep(1000);
+                    for (int i = 1; i < v + 1; i++)
+                    {
+                        Fac = Fac * i;
+                        f = new Cuadro(100, 40, "Cuadrado", "c", a);
+                        DibujaFigura(x, y, Fac, a, b);
+                    }
                 }
+                else
+                {
+                    for (int i = 1; i < v + 1; i++)
+                    {
+                        Fac = Fac * i;
+                        f = new Circulo(100, 40, "Cuadrado", "c", a);
+                        DibujaFigura(x, y, Fac, a, b);
+                    }
+                }
+
             }
             
-            /*switch (Figura.SelectedIndex)
-            {
-                case 0:
-                    f = new Circulo(x, y, "circulo", "c", 30);
-                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
-                    break;
-                case 1:
-                    f = new Cuadro(x, y, "Cuadrado", "c", 30);
-                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
-                    break;
-                case 2:
-                    f = new Triangulo(x, y, "circulo", "c", 30, 30);
-                    f.Dibuja(e.Graphics, new Pen(Color.Beige), new SolidBrush(Color.Black));
-                    break;
-            }*/
+           
 
         }
 
