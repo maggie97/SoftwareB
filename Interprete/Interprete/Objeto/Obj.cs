@@ -8,9 +8,11 @@ namespace Interprete
 {
     class Obj
     {
-        Figura f;
-        string Tipo;
-        string nomb;
+        private Figura f;
+        private string Tipo;
+        private string nomb;
+        private object valor;
+
 
         public Figura F { get => f; set => f = value; }
         public string Tipo1 { get => Tipo; set => Tipo = value; }
@@ -24,22 +26,22 @@ namespace Interprete
 
         public void creaFig()
         {
-
+            f = new Figura(100, 40, Tipo, Nomb);
         }
         //Método para buscar el tipo del objeto (Entero, cadena o carácter)
         public void Busco()
         {
-            switch (Tipo)
+            if(Tipo == "string")
             {
-                case "int":
-                    break;
-                case "float":
-                    break;
-                case "char":
-                    break;
-                case "string":
-                    break;
+                
             }
+            else
+            {
+
+            }
+        }
+        public virtual void RegresaTipo() {
+
         }
     }
 }
