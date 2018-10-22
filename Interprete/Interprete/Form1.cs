@@ -66,8 +66,8 @@ namespace Interprete
             aux = Linea.Split(' ');
             if (linea == 2) //Contador de línea
             {
-                l = aux[0].Split('(');
-                Funcion = l[0];
+                l = aux[0].Split('.','(');
+                Funcion = l[1];
                 Prueba.Text = Funcion;
             }
             if (linea == 1)
@@ -89,8 +89,9 @@ namespace Interprete
         {
 
         }
-        public void DibujaFigura(int x, int y, int Fac,int a, int b)
+        public void DibujaFigura(ref int x, ref int y, ref int Fac,ref int a, ref int b)
         {
+            g.Clear(Color.Silver);
             y = (b + 40) / 2;
             x = (a + 20) / 2;
             f.Dibuja(g, new Pen(Color.Beige), new SolidBrush(Color.Black));
@@ -98,7 +99,6 @@ namespace Interprete
             a += 20;
             b += 20;
             Thread.Sleep(1000);
-            g.Clear(Color.Silver);
         }
         private void PanelVisual_Paint(object sender, PaintEventArgs e)
         {
@@ -109,29 +109,30 @@ namespace Interprete
             int Fac = 1;
             if (Funcion == "Factorial")
             {
-                if(Ob.Tipo1 == "int")
+                if (Ob.Tipo1 == "int")
                 {
                     for (int i = 1; i < v + 1; i++)
                     {
                         Fac = Fac * i;
                         f = new Cuadro(100, 40, "Cuadrado", "c", a);
-                        DibujaFigura(x, y, Fac, a, b);
+                        DibujaFigura(ref x, ref y, ref Fac, ref a, ref b);
                     }
                 }
-                else
-                {
-                    for (int i = 1; i < v + 1; i++)
-                    {
-                        Fac = Fac * i;
-                        f = new Circulo(100, 40, "Cuadrado", "c", a);
-                        DibujaFigura(x, y, Fac, a, b);
-                    }
-                }
-
+                Funcion = "";
             }
-            
-           
-
+            else if(Funcion == "Duplica")
+            {
+                if(Ob.Tipo1 == "float")
+                {
+                    a = a * v;
+                    b = b * v;
+                    f = new Circulo(100, 40, "Circulo", "c", a);
+                    
+                    DibujaFigura(ref x, ref y, ref Fac, ref a, ref b);
+                }
+                
+            }
+            Funcion = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -142,18 +143,23 @@ namespace Interprete
 
         private void BTNLinea_Click(object sender, EventArgs e)
         {
-            if (linea == Max)
+            if (linea == Max-1)
             {
+                TBLinea.Text = InText.Lines[linea];
+                Interpreta(InText.Lines[linea]);
                 BTNLinea.Enabled = false;
                 button1.Enabled = true;
-                TBLinea.Text = "";
-                MessageBox.Show("Ya no hay más lineas");
+                Invalidate();
+                PanelVisual.Invalidate();
+                //MessageBox.Show("Ya no hay más lineas");
             }
             else
             {
                 TBLinea.Text = InText.Lines[linea];
                 Interpreta(InText.Lines[linea]);
                 linea++;
+                Invalidate();
+                PanelVisual.Invalidate();
             }
 
         } 
