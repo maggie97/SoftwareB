@@ -57,6 +57,11 @@ namespace Interprete
                 f = new Circulo(100, 40, "Circulo", "c", 30);
                 f.Dibuja(g, new Pen(Color.Beige), new SolidBrush(Color.Black));
             }
+            else if(Ob.Tipo1 == "char")
+            {
+                f = new Triangulo(100, 40, "Triangulo", "c", 100);
+                f.Dibuja(g, new Pen(Color.Beige, 2), new SolidBrush(Color.Black));
+            }
         }
 
         //Método que separa las siguientes lineas, asignando las acciones que se harán
@@ -71,8 +76,9 @@ namespace Interprete
                 Prueba.Text = Funcion;
             }
             if (linea == 1)
-            {
-                valor = aux[2];
+            { 
+                valor = aux[2].ToString();
+                f.Valor = valor;
             }
 
         }
@@ -105,7 +111,13 @@ namespace Interprete
             int x = 0, y = 0;
             int a = 30;
             int b = 30;
-            int v = Int32.Parse(valor);
+            int v = 0;
+            if (f != null)
+            {
+                if (f.Tipo1 != "Triangulo")
+                    v = Int32.Parse(valor);
+                f.Dibuja(g, new Pen(Color.Beige), new SolidBrush(Color.Black));
+            }
             int Fac = 1;
             if (Funcion == "Factorial")
             {

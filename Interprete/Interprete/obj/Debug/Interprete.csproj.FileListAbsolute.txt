@@ -28,3 +28,13 @@ C:\Users\Ivan\Desktop\SoftwareB2\Interprete\Interprete\obj\Debug\Interprete.cspr
 C:\Users\Ivan\Desktop\SoftwareB2\Interprete\Interprete\obj\Debug\Interprete.csproj.CoreCompileInputs.cache
 C:\Users\Ivan\Desktop\SoftwareB2\Interprete\Interprete\obj\Debug\Interprete.exe
 C:\Users\Ivan\Desktop\SoftwareB2\Interprete\Interprete\obj\Debug\Interprete.pdb
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.exe.config
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.exe
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\bin\Debug\Interprete.pdb
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csprojAssemblyReference.cache
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.Form1.resources
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.Properties.Resources.resources
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.GenerateResource.cache
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.csproj.CoreCompileInputs.cache
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.exe
+C:\Users\Maggie\Desktop\SoftwareB\Interprete\Interprete\obj\Debug\Interprete.pdb
